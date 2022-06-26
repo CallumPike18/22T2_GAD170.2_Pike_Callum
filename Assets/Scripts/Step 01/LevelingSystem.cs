@@ -41,6 +41,7 @@ public class LevelingSystem : MonoBehaviour
     public void AddXP(int xpGained)
     {
         // We want to be able to add on the xpGained onto our currentXp.
+        currentXp = currentXp + xpGained;
 
         // We probably want to check to see if we've gained enough xp to trigger a level up to occur.
 
