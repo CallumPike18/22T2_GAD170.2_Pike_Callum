@@ -31,8 +31,23 @@ public class CharacterNameGenerator : MonoBehaviour
     public void CreateNames()
     {
         // So here we would ideally want to be able to add some names to our first names, last names and nick names lists.
-        firstNames.Add("Callum, Flyest of dancers");
-        firstNames.Add(" ");
+        firstNames.Add("Callum");
+        firstNames.Add("Michael");
+        firstNames.Add("Gaxxor");
+        firstNames.Add("Jesus");
+        firstNames.Add("Madison");
+
+        lastNames.Add("Pike");
+        lastNames.Add("Wichael");
+        lastNames.Add("Krestus");
+        lastNames.Add("Jesus(but as a last name)");
+        lastNames.Add("Schmolz");
+
+        nicknames.Add("Flyest of dancers");
+        nicknames.Add("Cichael");
+        nicknames.Add("Unholy Brethren of the damned");
+        nicknames.Add("Son of God");
+        nicknames.Add("funkiest of the funky");
 
 
     }
