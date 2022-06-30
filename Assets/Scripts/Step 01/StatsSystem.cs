@@ -33,6 +33,9 @@ public class StatsSystem : MonoBehaviour
     public void GeneratePhysicalStatsStats()
     {
         // Let's set up agility, intelligence and strength to some default Random values.
+        agility=Random.Range(1,11);
+        strength=Random.Range(1,11);
+        intelligence=Random.Range(1,11);
     }
 
     /// <summary>
@@ -52,11 +55,15 @@ public class StatsSystem : MonoBehaviour
 
         // now that we have some stats and our multiplier values let's calculate our style, luck and ryhtmn based on these values, hint your going to need to convert ints to floats, then floats to ints.
 
+
         // style should be based off our strength and be converted at a rate of 1 : 1.
+        style = (int)(strength * strengthMultiplier);
 
         // luck should be based off our intelligence and be converted at a rate of 1 : 1.5f
+        luck = ((int)(intelligence * intelligenceMultiplier));
 
-        // rhythm should be based off our agility and be converted at a rate of 1 : 0.5.
+        // rhythm should be based off our agility and be conerted at a rate of 1 : 0.5.
+        rhythm = ((int)(agility * agilityMultiplier));
 
     }
 
@@ -67,9 +74,10 @@ public class StatsSystem : MonoBehaviour
     public void ChangeHealth(float amount)
     {
         // We probably want to change our current health based on the amount coming in.
+        playerHealth = playerHealth - amount;
 
         // currently we are just automatically removing our player...but we probably only want to do that if there is a character and their health is less than 0.
-        if(character != null)
+        if(playerHealth <= 0)
         {
             character.RemoveFromTeam();
         }
@@ -81,7 +89,11 @@ public class StatsSystem : MonoBehaviour
     public void DistributePhysicalStatsOnLevelUp(int PointsPool)
     {
         // we've been granted some more points to increase our stats by.
+
         // let's share these points somewhat evenly or based on some formula to increase our current physical stats
+        strength = strength + 4;
+        agility = agility + 3;
+        intelligence = intelligence + 3;
         // then let's recalculate our dancing stats again to process and update the new values.
 
     }
