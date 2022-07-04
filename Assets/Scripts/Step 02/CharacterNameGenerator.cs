@@ -60,6 +60,7 @@ public class CharacterNameGenerator : MonoBehaviour
     {
         // So here rather than each character being called Blanky Blank Blank, we probably want it to be a random first,last and nickname
 
+
     }
 
     /// <summary>
